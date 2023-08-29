@@ -1,0 +1,80 @@
+/* Estilos generales */
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+/* Estilos para el formulario */
+.form-container {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.form-label {
+  font-weight: bold;
+  color: #555;
+}
+
+.form-control {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 8px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-control:focus {
+  border-color: #047dff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-primary {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para el resultado */
+.alert {
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border-color: #c3e6cb;
+}
+
+.alert-info {
+  background-color: #cce5ff;
+  color: #004085;
+  border-color: #b8daff;
+}
+
+/* Estilos para el mensaje del resultado */
+p {
+  font-size: 18px;
+  color: #333;
+  margin-top: 15px;
+}

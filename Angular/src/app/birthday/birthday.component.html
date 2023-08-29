@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cálculo de días para el cumpleaños</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h2 class="my-4 text-center">Cuantos días Faltan para tu cumpleaños?</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form (ngSubmit)="calculateDays()" #birthdayForm="ngForm" class="form-container">
+          <div class="mb-3">
+            <label for="birthdate" class="form-label">Fecha de Nacimiento:</label>
+            <input type="date" class="form-control" id="birthdate" name="birthdate" [(ngModel)]="birthdate" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Calcular</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-6">
+        <div *ngIf="daysLeft === 0" class="alert alert-success text-center">
+          <p>¡Hoy es tu cumpleaños! 🎉</p>
+        </div>
+        <div *ngIf="daysLeft !== null" class="alert alert-info text-center">
+          <p>
+            {{ daysLeft }} Días Faltan,<br>
+            {{ hoursLeft }} horas,<br>
+            {{ secondsLeft }} segundos para tu próximo cumpleaños 🎉🎂🎉🎂🎉.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
